@@ -1,6 +1,6 @@
 # FlySolo
 
-A new Flutter project.
+Enduring society's hostility towards a natural process like mentruation is one heck of a challenge.To make life a bit easier,FlySolo brings along a safe space where you can connect with incredible women and share your inspiring story.So wear your super-woman cape and let us be your side-kick.Let the journey to  destigmatise MENSTRUATION begin.
 
 ## Getting Started
 
