@@ -47,11 +47,14 @@ class _AboutPageState extends State<AboutPage> {
                     "http://mlh-fellow-portfolio.herokuapp.com/static/assets/images/notebook.png"),
               ),
               Container(
+                margin: EdgeInsets.all(20),
                 padding: EdgeInsets.all(10),
                 child: Text(
                   "Enduring society's hostility towards a natural process like mentruation is one heck of a challenge.To make life a bit easier,FlySolo brings alog a safe space where you can connect with incredible women and share your inspiring story.So wear your super-woman cape and let us be your side-kick.Let us together destigmatise MENSTRUATION.",
                   style: TextStyle(
-                      fontSize: 20, letterSpacing: 1, fontFamily: "Sofia"),
+                      fontSize: 20,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w500),
                 ),
               ),
               Container(

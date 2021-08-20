@@ -70,6 +70,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Bold.ttf
+    - family: Cinzel
+      fonts:
+        - asset: fonts/Cinzel-VariableFont_wght.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

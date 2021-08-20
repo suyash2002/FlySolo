@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'about.dart';
+import 'essentials.dart';
+import 'tracker.dart';
 
 void main() => runApp(app());
 
@@ -32,71 +34,102 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 35,
+                fontFamily: "Cinzel",
                 letterSpacing: 1,
-                fontWeight: FontWeight.w400,
-                fontFamily: 'Sofia',
               ),
             ),
             centerTitle: true,
             iconTheme: IconThemeData(color: Colors.black)),
         drawer: new Drawer(
-            child: ListView(
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: Text("Hello user!"),
-              accountEmail: Text("testemail@gmailcom"),
-              currentAccountPicture: new CircleAvatar(
-                backgroundImage: new NetworkImage(
-                    "https://blush.design/api/download?shareUri=iUR0gDozwBGtmV97&c=Clothes_0%7Effbcbf-0.1%7Effbcbf_Hair_0%7Effe5b5-0.1%7E50271b_Skin_0%7Ee88f70-0.1%7Ec47357&w=800&h=800&fm=png"),
+            child: Container(
+          color: const Color(0xFFFB8E6FF),
+          child: ListView(
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFB8E6FF),
+                ),
+                accountName: Text(
+                  "Hello user!",
+                  style: TextStyle(fontSize: 17, color: Colors.black),
+                ),
+                accountEmail: Text(
+                  "testemail@gmailcom",
+                  style: TextStyle(
+                    fontFamily: "Sofia",
+                    fontSize: 20,
+                    color: Colors.black,
+                  ),
+                ),
+                currentAccountPicture: new CircleAvatar(
+                  backgroundImage: new NetworkImage(
+                      "https://blush.design/api/download?shareUri=iUR0gDozwBGtmV97&c=Clothes_0%7Effbcbf-0.1%7Effbcbf_Hair_0%7Effe5b5-0.1%7E50271b_Skin_0%7Ee88f70-0.1%7Ec47357&w=800&h=800&fm=png"),
+                ),
               ),
-            ),
-            ListTile(
-                title: Text("About us"),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => new AboutPage()));
-                }),
-            new Divider(color: Colors.blue, height: 5.0),
-            ListTile(
-                title: Text("Tracker"),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => new AboutPage()));
-                }),
-            new Divider(
-              color: Colors.blue,
-            ),
-            ListTile(
-                title: Text("Essentials"),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => new AboutPage()));
-                }),
-            new Divider(
-              color: Colors.blue,
-            ),
-            ListTile(
-                title: Text("Login/Signup"),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => new AboutPage()));
-                }),
-            new Divider(
-              color: Colors.blue,
-            ),
-          ],
+              new Divider(color: Colors.blue, height: 10.0),
+              ListTile(
+                  title: Text(
+                    "About us",
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                new AboutPage()));
+                  }),
+              new Divider(color: Colors.blue, height: 5.0),
+              ListTile(
+                  title: Text(
+                    "Tracker",
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) => new tracker()));
+                  }),
+              new Divider(
+                color: Colors.blue,
+              ),
+              ListTile(
+                  title: Text(
+                    "Essentials",
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                new essentials()));
+                  }),
+              new Divider(
+                color: Colors.blue,
+              ),
+              ListTile(
+                  title: Text(
+                    "Login/Signup",
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                new AboutPage()));
+                  }),
+              new Divider(
+                color: Colors.blue,
+              ),
+            ],
+          ),
         )),
         body: SingleChildScrollView(
           child: Column(
@@ -118,6 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   decoration: BoxDecoration(
                     color: const Color(0xFFFB8E6FF),
                     borderRadius:
@@ -141,64 +175,78 @@ class _MyHomePageState extends State<MyHomePage> {
                     "Features",
                     style: TextStyle(fontSize: 35, fontFamily: 'Poppins'),
                   )),
-              Row(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(50, 50, 0, 25),
-                    alignment: Alignment.topLeft,
-                    child: Image(
-                      height: 125,
-                      image: NetworkImage(
-                          "https://imagetourlconverter.com/files/GXkRCHLeWI918596.png"),
-                    ),
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(63, 0, 0, 0),
-                      child: Text(
-                        "Tracker",
-                        style: TextStyle(fontSize: 30),
-                      ))
-                ],
-              ),
-              Row(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                    height: 125,
-                    alignment: Alignment.topLeft,
-                    child: Image(
-                      image: NetworkImage(
-                          "https://imagetourlconverter.com/files/wkcHPMxmUC314330.png"),
-                    ),
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                      child: Text(
-                        "Essentials",
-                        style: TextStyle(fontSize: 30),
-                      ))
-                ],
-              ),
-              Row(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(50, 25, 0, 25),
-                    height: 120,
-                    alignment: Alignment.topLeft,
-                    child: Image(
-                      image: NetworkImage(
-                          "https://imagetourlconverter.com/files/KpyVlNVzBX751246.png"),
-                    ),
-                  ),
-                  Container(
-                      padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                      width: 200,
+              Container(
+                decoration: BoxDecoration(
+                    color: const Color(0xFFFB8E6FF),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(60.0),
+                      topRight: Radius.circular(60.0),
+                    )),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.fromLTRB(50, 50, 0, 25),
                       alignment: Alignment.topLeft,
-                      child: Text(
-                        "About Us",
-                        style: TextStyle(fontSize: 30),
-                      ))
-                ],
+                      child: Image(
+                        height: 125,
+                        image: NetworkImage(
+                            "https://imagetourlconverter.com/files/GXkRCHLeWI918596.png"),
+                      ),
+                    ),
+                    Container(
+                        padding: EdgeInsets.fromLTRB(55, 0, 0, 0),
+                        child: Text(
+                          "Tracker",
+                          style: TextStyle(fontSize: 30),
+                        ))
+                  ],
+                ),
+              ),
+              Container(
+                color: const Color(0xFFFB8E6FF),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                      height: 125,
+                      alignment: Alignment.topLeft,
+                      child: Image(
+                        image: NetworkImage(
+                            "https://imagetourlconverter.com/files/wkcHPMxmUC314330.png"),
+                      ),
+                    ),
+                    Container(
+                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: Text(
+                          "Essentials",
+                          style: TextStyle(fontSize: 30),
+                        ))
+                  ],
+                ),
+              ),
+              Container(
+                color: const Color(0xFFFB8E6FF),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.fromLTRB(50, 25, 0, 25),
+                      height: 120,
+                      alignment: Alignment.topLeft,
+                      child: Image(
+                        image: NetworkImage(
+                            "https://imagetourlconverter.com/files/KpyVlNVzBX751246.png"),
+                      ),
+                    ),
+                    Container(
+                        padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
+                        width: 200,
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          "About Us",
+                          style: TextStyle(fontSize: 30),
+                        ))
+                  ],
+                ),
               )
             ],
           ),
