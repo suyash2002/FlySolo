@@ -26,15 +26,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        backgroundColor: const Color(0xFFFEEFEFE),
+        backgroundColor: const Color(0xFFF3a67cc),
         appBar: AppBar(
-            backgroundColor: const Color(0xFFFB8E6FF),
+            backgroundColor: const Color(0xFFFB6A6CA),
             title: Text(
               "FlySolo",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 35,
-                fontFamily: "Cinzel",
+                fontFamily: "Poppins",
                 letterSpacing: 1,
               ),
             ),
@@ -42,12 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
             iconTheme: IconThemeData(color: Colors.black)),
         drawer: new Drawer(
             child: Container(
-          color: const Color(0xFFFB8E6FF),
+          color: const Color(0xFFFB6A6CA),
           child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFB8E6FF),
+                  color: const Color(0xFFF3a67cc),
                 ),
                 accountName: Text(
                   "Hello user!",
@@ -62,11 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 currentAccountPicture: new CircleAvatar(
-                  backgroundImage: new NetworkImage(
-                      "https://blush.design/api/download?shareUri=iUR0gDozwBGtmV97&c=Clothes_0%7Effbcbf-0.1%7Effbcbf_Hair_0%7Effe5b5-0.1%7E50271b_Skin_0%7Ee88f70-0.1%7Ec47357&w=800&h=800&fm=png"),
+                  backgroundImage: new AssetImage("assets/images/avatar.png"),
                 ),
               ),
-              new Divider(color: Colors.blue, height: 10.0),
               ListTile(
                   title: Text(
                     "About us",
@@ -135,30 +133,48 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.fromLTRB(0, 40, 0, 15),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFB6A6CA),
+                  borderRadius:
+                      BorderRadius.circular(10), //border corner radius
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5), //color of shadow
+                      //spread radius
+                      blurRadius: 0, // blur radius
+                      offset: Offset(10, 10), // changes position of shadow
+                      //first paramerter of offset is left-right
+                      //second parameter is top to down
+                    ),
+                    //you can set more BoxShadow() here
+                  ],
+                ),
+                margin: EdgeInsets.fromLTRB(0, 40, 0, 15),
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                 alignment: Alignment.topCenter,
                 child: Text(
                   "Hello there!",
                   style: TextStyle(fontSize: 35, fontFamily: "Poppins"),
                 ),
+                width: 300,
               ),
               Container(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: Image(
-                  image: NetworkImage(
-                    "https://imagetourlconverter.com/files/Sza4NVxuVF135089.png",
+                  image: AssetImage(
+                    'assets/images/hi.png',
                   ),
                 ),
               ),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFB8E6FF),
+                    color: const Color(0xFFFB6A6CA),
                     borderRadius:
                         BorderRadius.circular(10), //border corner radius
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.8), //color of shadow
+                        color: Colors.black.withOpacity(0.5), //color of shadow
                         //spread radius
                         blurRadius: 0, // blur radius
                         offset: Offset(10, 10), // changes position of shadow
@@ -177,7 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   )),
               Container(
                 decoration: BoxDecoration(
-                    color: const Color(0xFFFB8E6FF),
+                    color: const Color(0xFFFB6A6CA),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(60.0),
                       topRight: Radius.circular(60.0),
@@ -188,63 +204,95 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.fromLTRB(50, 50, 0, 25),
                       alignment: Alignment.topLeft,
                       child: Image(
-                        height: 125,
-                        image: NetworkImage(
-                            "https://imagetourlconverter.com/files/GXkRCHLeWI918596.png"),
+                        height: 100,
+                        image: AssetImage('assets/images/Calendar.png'),
                       ),
                     ),
                     Container(
-                        padding: EdgeInsets.fromLTRB(55, 0, 0, 0),
+                      padding: EdgeInsets.all(40),
+                      child: FlatButton(
+                        onPressed: () {
+                          {
+                            Navigator.of(context).pop();
+                            Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        new tracker()));
+                          }
+                        },
                         child: Text(
                           "Tracker",
-                          style: TextStyle(fontSize: 30),
-                        ))
+                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
               Container(
-                color: const Color(0xFFFB8E6FF),
+                color: const Color(0xFFFB6A6CA),
                 child: Row(
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                      height: 125,
+                      height: 90,
                       alignment: Alignment.topLeft,
                       child: Image(
-                        image: NetworkImage(
-                            "https://imagetourlconverter.com/files/wkcHPMxmUC314330.png"),
+                        image: AssetImage('assets/images/essentials.png'),
                       ),
                     ),
                     Container(
-                        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                      padding: EdgeInsets.all(30),
+                      child: FlatButton(
+                        onPressed: () {
+                          {
+                            Navigator.of(context).pop();
+                            Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        new essentials()));
+                          }
+                        },
                         child: Text(
                           "Essentials",
-                          style: TextStyle(fontSize: 30),
-                        ))
+                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
               Container(
-                color: const Color(0xFFFB8E6FF),
+                color: const Color(0xFFFB6A6CA),
                 child: Row(
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.fromLTRB(50, 25, 0, 25),
-                      height: 120,
+                      padding: EdgeInsets.fromLTRB(45, 25, 0, 25),
+                      height: 110,
                       alignment: Alignment.topLeft,
                       child: Image(
-                        image: NetworkImage(
-                            "https://imagetourlconverter.com/files/KpyVlNVzBX751246.png"),
+                        image: AssetImage('assets/images/pencil.png'),
                       ),
                     ),
                     Container(
-                        padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
-                        width: 200,
-                        alignment: Alignment.topLeft,
+                      padding: EdgeInsets.all(37),
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      new AboutPage()));
+                        },
                         child: Text(
                           "About Us",
-                          style: TextStyle(fontSize: 30),
-                        ))
+                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               )
