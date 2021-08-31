@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:FlySolo/pages/headings.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -14,33 +15,8 @@ class _AboutPageState extends State<AboutPage> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFB6A6CA),
-                  borderRadius:
-                      BorderRadius.circular(10), //border corner radius
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.5), //color of shadow
-                      //spread radius
-                      blurRadius: 0, // blur radius
-                      offset: Offset(10, 10), // changes position of shadow
-                      //first paramerter of offset is left-right
-                      //second parameter is top to down
-                    ),
-                    //you can set more BoxShadow() here
-                  ],
-                ),
-                margin: EdgeInsets.fromLTRB(0, 50, 0, 10),
-                alignment: Alignment.topCenter,
-                width: 250,
-                child: Text(
-                  " About us ",
-                  style: TextStyle(
-                      backgroundColor: const Color(0xFFFB6A6CA),
-                      fontSize: 40,
-                      fontFamily: "Poppins"),
-                ),
+              Head(
+                text: "About Us",
               ),
               Image(
                 image: AssetImage("assets/images/about.png"),
@@ -70,33 +46,8 @@ class _AboutPageState extends State<AboutPage> {
                       fontSize: 20, letterSpacing: 2, fontFamily: ("Roboto")),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFB6A6CA),
-                  borderRadius:
-                      BorderRadius.circular(10), //border corner radius
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.5), //color of shadow
-                      //spread radius
-                      blurRadius: 0, // blur radius
-                      offset: Offset(10, 10), // changes position of shadow
-                      //first paramerter of offset is left-right
-                      //second parameter is top to down
-                    ),
-                    //you can set more BoxShadow() here
-                  ],
-                ),
-                margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                alignment: Alignment.topCenter,
-                width: 250,
-                child: Text(
-                  " Contact us ",
-                  style: TextStyle(
-                      backgroundColor: const Color(0xFFFB6A6CA),
-                      fontSize: 40,
-                      fontFamily: "Poppins"),
-                ),
+              Head(
+                text: "Contact us",
               ),
               Image(
                 image: AssetImage("assets/images/contact.png"),
