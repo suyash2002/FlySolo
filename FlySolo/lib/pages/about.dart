@@ -23,7 +23,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFB6A6CA),
+                  color: Colors.blue[100],
                   borderRadius:
                       BorderRadius.circular(10), //border corner radius
                   boxShadow: [
@@ -54,7 +54,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFB6A6CA),
+                  color: Colors.blue[100],
                   borderRadius:
                       BorderRadius.circular(10), //border corner radius
                   boxShadow: [
@@ -85,7 +85,7 @@ class _AboutPageState extends State<AboutPage> {
 
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      color: const Color(0xFFFB6A6CA),
+                      color: Colors.blue[100],
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.mail_outline_rounded),
