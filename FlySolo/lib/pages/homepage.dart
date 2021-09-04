@@ -162,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Container(
                       padding: EdgeInsets.all(40),
-                      child: FlatButton(
+                      child: TextButton(
                         onPressed: () {
                           {
                             Navigator.of(context).pop();
@@ -175,7 +175,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: Text(
                           "Tracker",
-                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: "Roboto",
+                              color: Colors.black),
                         ),
                       ),
                     )
@@ -199,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: FlatButton(
                         onPressed: () {
                           {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pop('/');
                             Navigator.push(
                                 context,
                                 new MaterialPageRoute(
@@ -232,7 +235,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(37),
                       child: FlatButton(
                         onPressed: () {
-                          Navigator.of(context).pop();
+                          Navigator.of(context).pop('/');
                           Navigator.push(
                               context,
                               new MaterialPageRoute(

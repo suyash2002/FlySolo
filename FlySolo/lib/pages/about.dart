@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:FlySolo/pages/headings.dart';
+import 'homepage.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -15,8 +16,29 @@ class _AboutPageState extends State<AboutPage> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Head(
-                text: "About Us",
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    alignment: Alignment.topLeft,
+                    child: FlatButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) => Home()));
+                        },
+                        child: Icon(
+                          Icons.home,
+                          size: 50,
+                          color: Colors.blue[100],
+                        )),
+                  ),
+                  Container(
+                      alignment: Alignment.topCenter,
+                      child: Head(text: "AboutUs")),
+                ],
               ),
               Image(
                 image: AssetImage("assets/images/about.png"),
