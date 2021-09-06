@@ -8,7 +8,6 @@ Enduring society's hostility towards a natural process like mentruation is one h
 <p>
 <img src="https://i.ibb.co/CwW31Bb/Whats-App-Image-2021-09-06-at-13-41-46.jpg" alt="Whats-App-Image-2021-09-06-at-13-41-46" border="0" height="200px">
 <img src="https://i.ibb.co/mhmYV4x/Whats-App-Image-2021-09-06-at-13-41-46-1.jpg" alt="Whats-App-Image-2021-09-06-at-13-41-46-1" border="0" height="200px" >
-<img src="https://i.ibb.co/hD9ZxhL/Whats-App-Image-2021-09-06-at-13-52-09-1.jpg" alt="Whats-App-Image-2021-09-06-at-13-52-09-1" border="0" height="200px">
 <img src="https://i.ibb.co/wBvYjsT/Whats-App-Image-2021-09-06-at-13-52-09.jpg" alt="Whats-App-Image-2021-09-06-at-13-52-09" border="0"height="200px">
 <img src="https://i.ibb.co/hD9ZxhL/Whats-App-Image-2021-09-06-at-13-52-09-1.jpg" alt="Whats-App-Image-2021-09-06-at-13-52-09-1" border="0" height="200px">
   </p>
