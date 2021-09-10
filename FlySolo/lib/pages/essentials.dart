@@ -16,30 +16,9 @@ class _EssentialsState extends State<Essentials> {
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      alignment: Alignment.topLeft,
-                      child: FlatButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                            Navigator.push(
-                                context,
-                                new MaterialPageRoute(
-                                    builder: (BuildContext context) => Home()));
-                          },
-                          child: Icon(
-                            Icons.home,
-                            size: 50,
-                            color: Colors.blue[100],
-                          )),
-                    ),
-                    Container(
-                        alignment: Alignment.topCenter,
-                        child: Head(text: "Essentials")),
-                  ],
-                ),
+                Container(
+                    alignment: Alignment.topCenter,
+                    child: Head(text: "Essentials")),
                 Image.asset("assets/images/about.png"),
                 Container(
                   alignment: Alignment.topCenter,
@@ -63,9 +42,9 @@ class _EssentialsState extends State<Essentials> {
                   margin: EdgeInsets.fromLTRB(50, 40, 50, 20),
                   child: Text(
                     "Exercises",
-                    style: TextStyle(fontSize: 35, fontFamily: "Poppins"),
+                    style: TextStyle(fontSize: 25, fontFamily: "Poppins"),
                   ),
-                  width: 300,
+                  width: 200,
                 ),
                 Container(
                     margin: EdgeInsets.all(20),

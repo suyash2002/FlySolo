@@ -26,9 +26,9 @@ class Head extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Text(
         "$text",
-        style: TextStyle(fontSize: 35, fontFamily: "Poppins"),
+        style: TextStyle(fontSize: 25, fontFamily: "Poppins"),
       ),
-      width: 300,
+      width: 200,
     );
   }
 }

@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
               "FlySolo",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 35,
+                fontSize: 30,
                 fontFamily: "Poppins",
                 letterSpacing: 1,
               ),
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                   title: Text(
                     "About us",
-                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 20),
                   ),
                   onTap: () {
                     Navigator.of(context).pop();
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                   title: Text(
                     "Tracker",
-                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 20),
                   ),
                   onTap: () {
                     Navigator.of(context).pop();
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                   title: Text(
                     "Essentials",
-                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 20),
                   ),
                   onTap: () {
                     Navigator.of(context).pop();
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                   title: Text(
                     "Login/Signup",
-                    style: TextStyle(fontFamily: "Sofia", fontSize: 25),
+                    style: TextStyle(fontFamily: "Sofia", fontSize: 20),
                   ),
                   onTap: () {
                     Navigator.of(context).pop();
@@ -165,7 +165,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: TextButton(
                         onPressed: () {
                           {
-                            Navigator.of(context).pop();
                             Navigator.push(
                                 context,
                                 new MaterialPageRoute(
@@ -176,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           "Tracker",
                           style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 25,
                               fontFamily: "Roboto",
                               color: Colors.black),
                         ),
@@ -202,7 +201,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: FlatButton(
                         onPressed: () {
                           {
-                            Navigator.of(context).pop('/');
                             Navigator.push(
                                 context,
                                 new MaterialPageRoute(
@@ -212,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: Text(
                           "Essentials",
-                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                          style: TextStyle(fontSize: 25, fontFamily: "Roboto"),
                         ),
                       ),
                     )
@@ -235,7 +233,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(37),
                       child: FlatButton(
                         onPressed: () {
-                          Navigator.of(context).pop('/');
                           Navigator.push(
                               context,
                               new MaterialPageRoute(
@@ -244,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: Text(
                           "About Us",
-                          style: TextStyle(fontSize: 30, fontFamily: "Roboto"),
+                          style: TextStyle(fontSize: 25, fontFamily: "Roboto"),
                         ),
                       ),
                     )
